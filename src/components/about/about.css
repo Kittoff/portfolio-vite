@@ -1,8 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Poppins:wght@300;400;700&display=swap");
+
 .about {
+  color: #ffffff;
   display: flex;
   place-items: center;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: bisque;
+  background-color: rgb(35, 38, 58);
   justify-content: center;
+  font-family: "Overpass", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.about--content {
+  display: flex;
+  background: rgb(35, 38, 58);
+  width: 830px;
+  justify-content: space-between;
+}
+
+.about--presentation {
+  margin-right: 65px;
 }

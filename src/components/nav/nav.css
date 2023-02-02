@@ -1,13 +1,19 @@
 .nav {
   display: flex;
-  justify-content: space-evenly;
-  width: 100vw;
+  justify-content: space-between;
+  width: 830px;
   position: fixed;
-  background-color: cadetblue;
-  z-index: 20;
+  align-items: center;
+}
+.nav--container {
+  height: 25px;
+  justify-content: center;
+  align-content: baseline;
+  display: flex;
 }
 .nav a {
   text-decoration: none;
-  color: aquamarine;
-  font-size: 22px;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
 }
