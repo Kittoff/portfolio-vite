@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  position: fixed;
+  background-color: cadetblue;
+}
+.nav a {
+  text-decoration: none;
+  color: aquamarine;
+  font-size: 22px;
+}
