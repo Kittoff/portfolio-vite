@@ -9,15 +9,15 @@ import "./animatedRoutes.css";
 const AnimatedRoutes = () => {
   const location = useLocation();
   return (
-    <div className="container">
-      <AnimatePresence>
+    <AnimatePresence initial={false}>
+      <div className="container">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<About />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </AnimatePresence>
-    </div>
+      </div>
+    </AnimatePresence>
   );
 };
 

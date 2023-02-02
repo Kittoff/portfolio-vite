@@ -5,14 +5,10 @@ import { motion as m } from "framer-motion";
 const About = () => {
   return (
     <m.div
-      transition={{
-        delay: 0.5,
-        x: { duration: 1 },
-        default: { ease: "linear" },
-      }}
-      // initial={{ opacity: 0 }}
-      // animate={{ opacity: 1 }}
-      // exit={{ opacity: 0 }}
+      initial={{ y: "100%" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+      exit={{ opacity: 1 }}
       className="about"
     >
       About
