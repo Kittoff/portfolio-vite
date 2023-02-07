@@ -1,13 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./experience.css";
 import { motion as m } from "framer-motion";
-import { db } from "../../server/firebase.config";
-import { collection, DocumentData } from "firebase/firestore/lite";
+import { DocumentData } from "firebase/firestore/lite";
 import { getProjects } from "../../server/requests.jsx";
 
 const Experience = () => {
   const [projects, setProjects] = useState<DocumentData>([]);
-  const projectsCollection = collection(db, "projects");
 
   useEffect(() => {
     getProjects(setProjects);
