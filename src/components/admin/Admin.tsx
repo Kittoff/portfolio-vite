@@ -45,50 +45,46 @@ const Admin = () => {
     }
   };
 
-  const logout = async () => {
-    await signOut(auth);
-  };
-
   return (
     <>
       <div className="admin">
-        User logged : {user?.email}
-        <button onClick={logout}>Sign out</button>
+        {!user && (
+          <Login
+            login={login}
+            setLoginEmail={setLoginEmail}
+            setLoginPassword={setLoginPassword}
+          />
+        )}
+        {user && (
+          <>
+            {projects.map((project) => {
+              return (
+                <Fragment key={project.id}>
+                  <h1>{project.name}</h1>
+                  <button onClick={(id) => deleteProject(project.id)}>
+                    Delete
+                  </button>
+                </Fragment>
+              );
+            })}
+            <input
+              placeholder="Name of the project"
+              onChange={(e) => setnewProjectName(e.target.value)}
+            />
+            <textarea
+              placeholder="Description of the project"
+              onChange={(e) => setNewProjectDescription(e.target.value)}
+            />
+            <button
+              onClick={() =>
+                createProject(newProjectName, newProjectDescription)
+              }
+            >
+              Create project
+            </button>
+          </>
+        )}
       </div>
-      {!user && (
-        <Login
-          login={login}
-          setLoginEmail={setLoginEmail}
-          setLoginPassword={setLoginPassword}
-        />
-      )}
-      {user && (
-        <>
-          {projects.map((project) => {
-            return (
-              <Fragment key={project.id}>
-                <h1>{project.name}</h1>
-                <button onClick={(id) => deleteProject(project.id)}>
-                  Delete
-                </button>
-              </Fragment>
-            );
-          })}
-          <input
-            placeholder="Name of the project"
-            onChange={(e) => setnewProjectName(e.target.value)}
-          />
-          <textarea
-            placeholder="Description of the project"
-            onChange={(e) => setNewProjectDescription(e.target.value)}
-          />
-          <button
-            onClick={() => createProject(newProjectName, newProjectDescription)}
-          >
-            Create project
-          </button>
-        </>
-      )}
     </>
   );
 };

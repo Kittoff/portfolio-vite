@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 .box {
+  display: flex;
+  justify-content: center;
   position: relative;
   width: 380px;
   height: 420px;
@@ -100,7 +102,7 @@
   height: 44px;
 }
 
-input[type="submit"] {
+.links input[type="submit"] {
   border: none;
   outline: none;
   background: #45f3ff;
@@ -111,7 +113,7 @@ input[type="submit"] {
   font-weight: 600;
   cursor: pointer;
 }
-input[type="submit"]:active {
+.links input[type="submit"]:active {
   opacity: 0.8;
 }
 @keyframes animate {

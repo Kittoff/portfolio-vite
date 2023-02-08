@@ -2,7 +2,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/nav/Nav";
 import AnimatedRoutes from "./components/animatedRoutes/AnimatedRoutes";
-import { useState } from "react";
 
 function App() {
   // const [isLoaded, setisLoaded] = useState(false);
