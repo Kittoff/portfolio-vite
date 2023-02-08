@@ -14,13 +14,13 @@ import {
   getProjects,
 } from "../../server/requests.jsx";
 import "./admin.css";
+import Login from "./Login.js";
 
 const Admin = () => {
   const [loginEmail, setLoginEmail] = useState<string>("");
   const [loginPassword, setLoginPassword] = useState<string>("");
   const [user, setUser] = useState<User | null>(null);
   const [projects, setProjects] = useState<DocumentData>([]);
-
   const [newProjectName, setnewProjectName] = useState<string>("");
   const [newProjectDescription, setNewProjectDescription] =
     useState<string>("");
@@ -52,51 +52,43 @@ const Admin = () => {
   return (
     <>
       <div className="admin">
-        <div>
-          <h3> Login </h3>
-          <input
-            placeholder="Email..."
-            onChange={(event) => {
-              setLoginEmail(event.target.value);
-            }}
-          />
-          <input
-            placeholder="Password..."
-            onChange={(event) => {
-              setLoginPassword(event.target.value);
-            }}
-          />
-
-          <button onClick={login}> Login</button>
-        </div>
         User logged : {user?.email}
         <button onClick={logout}>Sign out</button>
       </div>
-
-      {user &&
-        projects.map((project) => {
-          return (
-            <Fragment key={project.id}>
-              <h1>{project.name}</h1>
-              <button onClick={(id) => deleteProject(project.id)}>
-                Delete
-              </button>
-            </Fragment>
-          );
-        })}
-      <input
-        placeholder="Name of the project"
-        onChange={(e) => setnewProjectName(e.target.value)}
-      />
-      <textarea
-        placeholder="Description of the project"
-        onChange={(e) => setNewProjectDescription(e.target.value)}
-      />
-      <button
-        onClick={() => createProject(newProjectName, newProjectDescription)}
-      >
-        Create project
-      </button>
+      {!user && (
+        <Login
+          login={login}
+          setLoginEmail={setLoginEmail}
+          setLoginPassword={setLoginPassword}
+        />
+      )}
+      {user && (
+        <>
+          {projects.map((project) => {
+            return (
+              <Fragment key={project.id}>
+                <h1>{project.name}</h1>
+                <button onClick={(id) => deleteProject(project.id)}>
+                  Delete
+                </button>
+              </Fragment>
+            );
+          })}
+          <input
+            placeholder="Name of the project"
+            onChange={(e) => setnewProjectName(e.target.value)}
+          />
+          <textarea
+            placeholder="Description of the project"
+            onChange={(e) => setNewProjectDescription(e.target.value)}
+          />
+          <button
+            onClick={() => createProject(newProjectName, newProjectDescription)}
+          >
+            Create project
+          </button>
+        </>
+      )}
     </>
   );
 };

@@ -25,7 +25,9 @@ const Experience = () => {
       {projects.map((project) => {
         return (
           <Fragment key={project.id}>
-            <h1>{project.name}</h1>
+            <div>
+              <h1>{project.name}</h1>
+            </div>
           </Fragment>
         );
       })}
