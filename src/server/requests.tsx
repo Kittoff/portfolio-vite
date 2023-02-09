@@ -5,7 +5,7 @@ import {
   doc,
   getDocs,
 } from "firebase/firestore/lite";
-import { db } from "./firebase.config.js";
+import { db } from "./firebase.config";
 
 export const projectsCollection = collection(db, "projects");
 
