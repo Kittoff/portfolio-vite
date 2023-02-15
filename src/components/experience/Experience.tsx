@@ -3,9 +3,11 @@ import "./experience.css";
 import { motion as m } from "framer-motion";
 import { DocumentData } from "firebase/firestore/lite";
 import { getProjects } from "../../server/requests.jsx";
+import ExperienceCard from "./experienceCard/ExperienceCard.js";
 
 const Experience = () => {
   const [projects, setProjects] = useState<DocumentData>([]);
+  const [imageUrl, setImageUrl] = useState<any>();
 
   useEffect(() => {
     getProjects(setProjects);
@@ -26,7 +28,15 @@ const Experience = () => {
         return (
           <Fragment key={project.id}>
             <div>
-              <h1>{project.name}</h1>
+              <ExperienceCard
+                description={project.description}
+                name={project.name}
+                client={project.client}
+                tasks={project.tasks}
+                tools={project.tools}
+                image={project.image}
+                technos={project.technos}
+              />
             </div>
           </Fragment>
         );

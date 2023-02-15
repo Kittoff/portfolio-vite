@@ -5,12 +5,13 @@
 }
 
 .navbar {
-  background: #19191a;
+  background: #1e2235;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  font-family: Roboto;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -84,10 +85,10 @@
 .menu-icon {
   display: none;
 }
-.signout {
+/* .signout {
   position: absolute;
   right: 0;
-}
+} */
 .signout input[type="submit"] {
   border: none;
   outline: none;

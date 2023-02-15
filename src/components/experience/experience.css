@@ -3,6 +3,7 @@
   place-items: center;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: rgb(86, 18, 61);
+  background-color: rgb(35, 38, 58);
   justify-content: center;
+  flex-wrap: wrap;
 }

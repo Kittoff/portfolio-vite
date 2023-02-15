@@ -18,7 +18,13 @@ const About = () => {
       <div className="about--content">
         <div className="about--presentation">
           <h1>I am Christophe LOZANO</h1>
-          <p>A developper that want to be better than yesterday </p>
+          <p>
+            A highly motivated and dedicated retrained developer with a passion
+            for continuous learning and improvement. I like to use React and I
+            want. You are a versatile individual who enjoys both independent
+            work and collaborating with like-minded people who are willing to
+            share their knowledge and expertise.
+          </p>
         </div>
         <div className="about--image">
           <img src="./img.png" alt="me" width={300} />
