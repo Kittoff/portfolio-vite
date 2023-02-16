@@ -25,10 +25,21 @@ export const deleteProject = async (id: string) => {
 
 export const createProject = async (
   newProjectName: string,
-  newProjectDescription: string
+  newProjectDescription: string,
+  newProjectTasks: any,
+  client: string,
+  tools: any,
+  technos: any
 ) => {
+  const selectedValues = technos.map((option) => option.value);
+  console.log("selecteddez : ", selectedValues);
+
   await addDoc(projectsCollection, {
     name: newProjectName,
     description: newProjectDescription,
+    tasks: newProjectTasks,
+    client: client,
+    tools: tools,
+    technos: selectedValues,
   });
 };
