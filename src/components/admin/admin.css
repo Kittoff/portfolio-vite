@@ -7,8 +7,33 @@
   place-items: center;
 }
 
-.projects {
-  display: flex;
-  flex-direction: column;
+.admin--container > .projects {
   min-height: 500px;
+  margin-right: 100px;
+  margin-right: 150px;
+}
+
+.admin--container {
+  display: flex;
+}
+.admin--container > .project-add-form {
+  display: grid;
+}
+.project-add-form input,
+textarea,
+select,
+button {
+  margin-bottom: 10px;
+  display: grid;
+}
+
+@media screen and (max-width: 960px) {
+  .admin--container {
+    display: block;
+  }
+  .admin--container > .projects {
+    display: block;
+    min-height: unset;
+    margin-bottom: 100px;
+  }
 }

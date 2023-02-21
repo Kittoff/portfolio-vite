@@ -64,25 +64,25 @@ p {
   margin-right: 5px;
 }
 
-.tools {
+.card > .tools {
   background: #09bef05a;
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.tools span {
+.card > .tools span {
   margin-right: 10px;
   display: inline-block;
   font-size: 16px;
 }
 
-.technos {
+.card > .technos {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.technos img {
+.card > .technos img {
   width: 50px;
   margin-right: 10px;
 }
@@ -94,7 +94,7 @@ p {
   .line {
     width: 320px;
   }
-  .technos {
+  .card > .technos {
     justify-content: space-evenly;
   }
 }

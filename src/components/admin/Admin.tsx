@@ -100,75 +100,99 @@ const Admin = () => {
   return (
     <>
       <div className="admin">
-        {!user && (
-          <Login
-            login={login}
-            setLoginEmail={setLoginEmail}
-            setLoginPassword={setLoginPassword}
-          />
-        )}
-        {user && (
-          <>
-            <div className="projects">
-              {projects.map((project) => {
-                return (
-                  <Fragment key={project.id}>
-                    <h1>{project.name}</h1>
-                    <button onClick={(id) => deleteProject(project.id)}>
-                      Delete
-                    </button>
-                  </Fragment>
-                );
-              })}
-            </div>
-            <div className="project-add-form">
-              <input
-                placeholder="Name of the project"
-                onChange={(e) => setnewProjectName(e.target.value)}
-              />
-              <input
-                placeholder="Client of the project"
-                onChange={(e) => setnewProjectClient(e.target.value)}
-              />
-              <input
-                placeholder="Tasks of the project"
-                onChange={(e) => setNewProjectTasks(e.target.value.split(","))}
-              />
-              <input
-                placeholder="Tools of the project"
-                onChange={(e) => setNewProjectTools(e.target.value.split(","))}
-              />
-              <textarea
-                placeholder="Description of the project"
-                onChange={(e) => setNewProjectDescription(e.target.value)}
-              />
-              <Select
-                value={selectedOption}
-                options={options}
-                onChange={handleChange}
-                getOptionValue={(option) => {
-                  return option.value;
-                }}
-                placeholder="Select an technos"
-                isMulti
-              />
-              <button
-                onClick={() =>
-                  createProject(
-                    newProjectName,
-                    newProjectDescription,
-                    newProjectTasks,
-                    newProjectClient,
-                    newProjectTools,
-                    newProjectTechnos
-                  )
-                }
-              >
-                Create project
-              </button>
-            </div>
-          </>
-        )}
+        <div className="admin--container">
+          {!user && (
+            <Login
+              login={login}
+              setLoginEmail={setLoginEmail}
+              setLoginPassword={setLoginPassword}
+            />
+          )}
+          {user && (
+            <>
+              <div className="projects">
+                {projects.map((project) => {
+                  return (
+                    <Fragment key={project.id}>
+                      <h1>{project.name}</h1>
+                      <button onClick={(id) => deleteProject(project.id)}>
+                        Delete
+                      </button>
+                    </Fragment>
+                  );
+                })}
+              </div>
+              <div className="project-add-form">
+                <div className="name">
+                  <span>Name of the project</span>
+                  <input
+                    placeholder="Name of the project"
+                    onChange={(e) => setnewProjectName(e.target.value)}
+                  />
+                </div>
+                <div className="client">
+                  <span>Client of the project</span>
+                  <input
+                    placeholder="Client of the project"
+                    onChange={(e) => setnewProjectClient(e.target.value)}
+                  />
+                </div>
+                <div className="tasks">
+                  <span>Tasks of the project</span>
+                  <input
+                    placeholder="Tasks of the project"
+                    onChange={(e) =>
+                      setNewProjectTasks(e.target.value.split(","))
+                    }
+                  />
+                </div>
+                <div className="tools">
+                  <span>Tools of the project</span>
+                  <input
+                    placeholder="Tools of the project"
+                    onChange={(e) =>
+                      setNewProjectTools(e.target.value.split(","))
+                    }
+                  />
+                </div>
+                <div className="description">
+                  <span>Description of the project</span>
+                  <textarea
+                    placeholder="Description of the project"
+                    onChange={(e) => setNewProjectDescription(e.target.value)}
+                  />
+                </div>
+                <div className="technos">
+                  <span>Technologies of the project</span>
+                  <Select
+                    value={selectedOption}
+                    options={options}
+                    onChange={handleChange}
+                    getOptionValue={(option) => {
+                      return option.value;
+                    }}
+                    placeholder="Select an technos"
+                    isMulti
+                  />
+                </div>
+                <button
+                  onClick={() =>
+                    createProject(
+                      newProjectName,
+                      newProjectDescription,
+                      newProjectTasks,
+                      newProjectClient,
+                      newProjectTools,
+                      newProjectTechnos
+                    )
+                  }
+                >
+                  Create project
+                </button>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </>
   );
