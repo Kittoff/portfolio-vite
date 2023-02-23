@@ -36,14 +36,14 @@ const ExperienceCard = ({
           <div className="tools-list">
             <p>
               {tools.map((tool: string) => {
-                return <span>{tool}</span>;
+                return <span key={tool}>{tool}</span>;
               })}
             </p>
           </div>
         </div>
         <div className="technos">
           {technos.map((techno: string) => {
-            return <img src={techno} />;
+            return <img key={techno} src={techno} />;
           })}
         </div>
       </div>
