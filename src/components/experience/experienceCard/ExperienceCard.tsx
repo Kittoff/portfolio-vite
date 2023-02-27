@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import useMediaQuery from "../../../hooks/useMediaQuerry.js";
 import "./experienceCard.css";
 
 const ExperienceCard = ({
@@ -10,13 +11,23 @@ const ExperienceCard = ({
   image,
   technos,
 }) => {
+  const isAboveLarge = useMediaQuery("(min-width: 421px)");
+
+  const handleLongClientName = (clientName: string) => {
+    if (!isAboveLarge) {
+      if (clientName === "Airbus Defense and Space") {
+        return "ADS";
+      }
+    }
+    return clientName;
+  };
   useEffect(() => {}, []);
   return (
     <div className="card-container">
       <div className="card">
         <div className="card-title">
           <h2>{name}</h2>
-          <h3>{client}</h3>
+          <h3>{handleLongClientName(client)}</h3>
         </div>
         <div className="line" />
         <div className="description">

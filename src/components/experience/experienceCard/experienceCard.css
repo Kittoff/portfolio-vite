@@ -98,3 +98,15 @@ p {
     justify-content: space-evenly;
   }
 }
+@media screen and (max-width: 420px) {
+  .card {
+    width: 350px;
+    height: auto;
+  }
+  .line {
+    width: 270px;
+  }
+  .card > .technos {
+    justify-content: space-evenly;
+  }
+}
