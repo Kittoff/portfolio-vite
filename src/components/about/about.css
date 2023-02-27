@@ -11,8 +11,10 @@
 .about--content {
   display: flex;
   background: rgb(35, 38, 58);
-  width: 830px;
+  /* width: 830px; */
+  padding: 0 100px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .about--presentation {
