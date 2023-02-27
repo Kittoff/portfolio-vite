@@ -40,4 +40,12 @@
     margin-left: 90px;
     letter-spacing: 9px;
   }
+  .about--content {
+    text-align: center;
+    padding: 0;
+  }
+  .about--presentation > p {
+    display: block;
+    text-align-last: start;
+  }
 }

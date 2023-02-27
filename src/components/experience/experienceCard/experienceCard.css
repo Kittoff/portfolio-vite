@@ -100,11 +100,11 @@ p {
 }
 @media screen and (max-width: 420px) {
   .card {
-    width: 350px;
+    width: 340px;
     height: auto;
   }
   .line {
-    width: 270px;
+    width: 260px;
   }
   .card > .technos {
     justify-content: space-evenly;
