@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "1:947194203719:web:b357b1f6a9208943aaab62",
+    "site": "portfolio-christophe",
     "public": "dist/",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
