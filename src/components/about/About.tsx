@@ -17,7 +17,9 @@ const About = () => {
     >
       <div className="about--content">
         <div className="about--presentation">
-          <h1>I am Christophe LOZANO</h1>
+          <h1>
+            I am Christophe <span>LOZANO</span>
+          </h1>
           <p>
             A highly motivated and dedicated retrained developer with a passion
             for continuous learning and improvement. I like to use React and I

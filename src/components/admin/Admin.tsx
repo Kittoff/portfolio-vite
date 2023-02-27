@@ -33,11 +33,10 @@ const Admin = () => {
   const [newProjectDescription, setNewProjectDescription] =
     useState<string>("");
   const [newProjectClient, setnewProjectClient] = useState<string>("");
-  const [newProjectTasks, setNewProjectTasks] = useState<any>(undefined);
-  const [newProjectTools, setNewProjectTools] = useState<any>(undefined);
-  const [newProjectTechnos, setNewProjectTechnos] = useState<any>([]);
-  const [imageUpload, setImageUpload] = useState<any>(null);
-  const [imageUrls, setImageUrls] = useState<any>([]);
+  const [newProjectTasks, setNewProjectTasks] = useState<string[]>([]);
+  const [newProjectTools, setNewProjectTools] = useState<string[]>([]);
+  const [newProjectTechnos, setNewProjectTechnos] = useState<string[]>([]);
+  const [imageUrls, setImageUrls] = useState<string[]>([]);
   const [selectedOption, setSelectedOption] = useState<any>([]);
   const [selectedImage, setSelectedImage] = useState<any>(null);
 
