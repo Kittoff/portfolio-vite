@@ -36,6 +36,9 @@
   }
 }
 @media screen and (max-width: 640px) {
+  .about {
+    place-items: self-start;
+  }
   .about--presentation > h1:nth-child(1) > span:nth-child(1) {
     margin-left: 90px;
     letter-spacing: 9px;
@@ -43,6 +46,7 @@
   .about--content {
     text-align: center;
     padding: 0;
+    width: 506px;
   }
   .about--presentation > p {
     display: block;
