@@ -1,7 +1,7 @@
 .experience {
   display: flex;
   place-items: center;
-  min-width: 100vw;
+  /* min-width: 100vw; */
   min-height: 100vh;
   background-color: rgb(35, 38, 58);
   justify-content: center;
