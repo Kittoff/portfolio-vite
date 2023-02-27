@@ -22,10 +22,8 @@ const About = () => {
           </h1>
           <p>
             A highly motivated and dedicated retrained developer with a passion
-            for continuous learning and improvement. I like to use React and I
-            want. You are a versatile individual who enjoys both independent
-            work and collaborating with like-minded people who are willing to
-            share their knowledge and expertise.
+            for continuous learning and improvement. I like to work with React
+            and discover new technologies.
           </p>
         </div>
         <div className="about--image">
